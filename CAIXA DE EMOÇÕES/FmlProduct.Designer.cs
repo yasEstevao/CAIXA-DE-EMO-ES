@@ -58,7 +58,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(183, -30);
+            this.pictureBox2.Location = new System.Drawing.Point(175, -40);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(500, 428);
             this.pictureBox2.TabIndex = 5;
@@ -66,6 +66,7 @@
             // 
             // BtnEnter
             // 
+            this.BtnEnter.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEnter.Location = new System.Drawing.Point(12, 48);
             this.BtnEnter.Name = "BtnEnter";
             this.BtnEnter.Size = new System.Drawing.Size(113, 47);
@@ -76,6 +77,7 @@
             // 
             // BtnCad
             // 
+            this.BtnCad.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCad.Location = new System.Drawing.Point(328, 366);
             this.BtnCad.Name = "BtnCad";
             this.BtnCad.Size = new System.Drawing.Size(201, 75);
