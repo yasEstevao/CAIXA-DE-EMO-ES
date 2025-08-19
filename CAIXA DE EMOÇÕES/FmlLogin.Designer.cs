@@ -31,123 +31,101 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmlLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.TxtName = new System.Windows.Forms.TextBox();
-            this.MtbCPF = new System.Windows.Forms.MaskedTextBox();
-            this.MtbTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtEmail1 = new System.Windows.Forms.TextBox();
-            this.txbAdress = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NomeCompleto = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
+            this.endereco = new System.Windows.Forms.TextBox();
+            this.telefone = new System.Windows.Forms.MaskedTextBox();
+            this.CPF = new System.Windows.Forms.MaskedTextBox();
+            this.continuar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-8, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(806, 295);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1149, 678);
+            this.pictureBox1.Size = new System.Drawing.Size(346, 410);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-8, -31);
+            this.pictureBox2.Location = new System.Drawing.Point(-13, -30);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1149, 690);
+            this.pictureBox2.Size = new System.Drawing.Size(1218, 682);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // NomeCompleto
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(784, 325);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(346, 318);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.NomeCompleto.Location = new System.Drawing.Point(408, 169);
+            this.NomeCompleto.Multiline = true;
+            this.NomeCompleto.Name = "NomeCompleto";
+            this.NomeCompleto.Size = new System.Drawing.Size(366, 51);
+            this.NomeCompleto.TabIndex = 2;
             // 
-            // TxtName
+            // Email
             // 
-            this.TxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtName.Location = new System.Drawing.Point(409, 213);
-            this.TxtName.Multiline = true;
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(358, 35);
-            this.TxtName.TabIndex = 3;
+            this.Email.Location = new System.Drawing.Point(408, 271);
+            this.Email.Multiline = true;
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(366, 51);
+            this.Email.TabIndex = 3;
             // 
-            // MtbCPF
+            // endereco
             // 
-            this.MtbCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtbCPF.Location = new System.Drawing.Point(213, 532);
-            this.MtbCPF.Mask = "000,000,000-00";
-            this.MtbCPF.Name = "MtbCPF";
-            this.MtbCPF.Size = new System.Drawing.Size(166, 31);
-            this.MtbCPF.TabIndex = 6;
+            this.endereco.Location = new System.Drawing.Point(408, 456);
+            this.endereco.Multiline = true;
+            this.endereco.Name = "endereco";
+            this.endereco.Size = new System.Drawing.Size(366, 51);
+            this.endereco.TabIndex = 4;
             // 
-            // MtbTelefone
+            // telefone
             // 
-            this.MtbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MtbTelefone.Location = new System.Drawing.Point(487, 380);
-            this.MtbTelefone.Mask = "(00)0000-00000";
-            this.MtbTelefone.Name = "MtbTelefone";
-            this.MtbTelefone.Size = new System.Drawing.Size(156, 31);
-            this.MtbTelefone.TabIndex = 7;
+            this.telefone.Location = new System.Drawing.Point(480, 371);
+            this.telefone.Mask = "(00) 0000-00000";
+            this.telefone.Name = "telefone";
+            this.telefone.Size = new System.Drawing.Size(100, 20);
+            this.telefone.TabIndex = 5;
             // 
-            // txtEmail1
+            // CPF
             // 
-            this.txtEmail1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail1.Location = new System.Drawing.Point(213, 288);
-            this.txtEmail1.Multiline = true;
-            this.txtEmail1.Name = "txtEmail1";
-            this.txtEmail1.Size = new System.Drawing.Size(358, 35);
-            this.txtEmail1.TabIndex = 8;
+            this.CPF.Location = new System.Drawing.Point(458, 583);
+            this.CPF.Mask = "000,000,000-00";
+            this.CPF.Name = "CPF";
+            this.CPF.Size = new System.Drawing.Size(100, 20);
+            this.CPF.TabIndex = 6;
             // 
-            // txbAdress
+            // continuar
             // 
-            this.txbAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAdress.Location = new System.Drawing.Point(285, 453);
-            this.txbAdress.Multiline = true;
-            this.txbAdress.Name = "txbAdress";
-            this.txbAdress.Size = new System.Drawing.Size(358, 35);
-            this.txbAdress.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(950, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 92);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Próximo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.continuar.Location = new System.Drawing.Point(946, 367);
+            this.continuar.Name = "continuar";
+            this.continuar.Size = new System.Drawing.Size(156, 107);
+            this.continuar.TabIndex = 7;
+            this.continuar.Text = "Continuar";
+            this.continuar.UseVisualStyleBackColor = true;
+            this.continuar.Click += new System.EventHandler(this.continuar_Click);
             // 
             // FmlLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1132, 645);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txbAdress);
-            this.Controls.Add(this.txtEmail1);
-            this.Controls.Add(this.MtbTelefone);
-            this.Controls.Add(this.MtbCPF);
-            this.Controls.Add(this.TxtName);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(1135, 615);
+            this.Controls.Add(this.continuar);
+            this.Controls.Add(this.CPF);
+            this.Controls.Add(this.telefone);
+            this.Controls.Add(this.endereco);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.NomeCompleto);
             this.Controls.Add(this.pictureBox1);
-            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.pictureBox2);
             this.Name = "FmlLogin";
-            this.Text = "FlmLogin";
+            this.Text = "FmlLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,12 +135,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox TxtName;
-        private System.Windows.Forms.MaskedTextBox MtbCPF;
-        private System.Windows.Forms.MaskedTextBox MtbTelefone;
-        private System.Windows.Forms.TextBox txtEmail1;
-        private System.Windows.Forms.TextBox txbAdress;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox NomeCompleto;
+        private System.Windows.Forms.TextBox Email;
+        private System.Windows.Forms.TextBox endereco;
+        private System.Windows.Forms.MaskedTextBox telefone;
+        private System.Windows.Forms.MaskedTextBox CPF;
+        private System.Windows.Forms.Button continuar;
     }
 }

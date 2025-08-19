@@ -58,17 +58,17 @@
     <Compile Include="FmlLogin.Designer.cs">
       <DependentUpon>FmlLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FmlNameUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FmlNameUser.Designer.cs">
-      <DependentUpon>FmlNameUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="FmlProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmlProduct.Designer.cs">
       <DependentUpon>FmlProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NomeDeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NomeDeUsuario.Designer.cs">
+      <DependentUpon>NomeDeUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,13 +77,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmlLogin.resx">
       <DependentUpon>FmlLogin.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FmlNameUser.resx">
-      <DependentUpon>FmlNameUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmlProduct.resx">
       <DependentUpon>FmlProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NomeDeUsuario.resx">
+      <DependentUpon>NomeDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

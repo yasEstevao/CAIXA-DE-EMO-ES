@@ -50,7 +50,7 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(206, 167);
+            this.TxtEmail.Location = new System.Drawing.Point(205, 172);
             this.TxtEmail.Multiline = true;
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(427, 52);
