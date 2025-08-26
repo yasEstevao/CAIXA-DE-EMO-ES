@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FmlEnter.cs">
+    <Compile Include="Entre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmlEnter.Designer.cs">
-      <DependentUpon>FmlEnter.cs</DependentUpon>
+    <Compile Include="Entre.Designer.cs">
+      <DependentUpon>Entre.cs</DependentUpon>
     </Compile>
     <Compile Include="FmlLogin.cs">
       <SubType>Form</SubType>
@@ -72,8 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FmlEnter.resx">
-      <DependentUpon>FmlEnter.cs</DependentUpon>
+    <EmbeddedResource Include="Entre.resx">
+      <DependentUpon>Entre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmlLogin.resx">
       <DependentUpon>FmlLogin.cs</DependentUpon>

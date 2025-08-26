@@ -33,10 +33,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.NomeCompleto = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
-            this.endereco = new System.Windows.Forms.TextBox();
-            this.telefone = new System.Windows.Forms.MaskedTextBox();
+            this.Endereco = new System.Windows.Forms.TextBox();
+            this.Telefone = new System.Windows.Forms.MaskedTextBox();
             this.CPF = new System.Windows.Forms.MaskedTextBox();
             this.continuar = new System.Windows.Forms.Button();
+            this.senha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-13, -30);
+            this.pictureBox2.Location = new System.Drawing.Point(-19, -30);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1218, 682);
             this.pictureBox2.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             // NomeCompleto
             // 
-            this.NomeCompleto.Location = new System.Drawing.Point(408, 169);
+            this.NomeCompleto.Location = new System.Drawing.Point(396, 167);
             this.NomeCompleto.Multiline = true;
             this.NomeCompleto.Name = "NomeCompleto";
             this.NomeCompleto.Size = new System.Drawing.Size(366, 51);
@@ -69,60 +70,74 @@
             // 
             // Email
             // 
-            this.Email.Location = new System.Drawing.Point(408, 271);
+            this.Email.Location = new System.Drawing.Point(396, 268);
             this.Email.Multiline = true;
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(366, 51);
             this.Email.TabIndex = 3;
             // 
-            // endereco
+            // Endereco
             // 
-            this.endereco.Location = new System.Drawing.Point(408, 456);
-            this.endereco.Multiline = true;
-            this.endereco.Name = "endereco";
-            this.endereco.Size = new System.Drawing.Size(366, 51);
-            this.endereco.TabIndex = 4;
+            this.Endereco.Location = new System.Drawing.Point(396, 458);
+            this.Endereco.Multiline = true;
+            this.Endereco.Name = "Endereco";
+            this.Endereco.Size = new System.Drawing.Size(366, 51);
+            this.Endereco.TabIndex = 4;
             // 
-            // telefone
+            // Telefone
             // 
-            this.telefone.Location = new System.Drawing.Point(480, 371);
-            this.telefone.Mask = "(00) 0000-00000";
-            this.telefone.Name = "telefone";
-            this.telefone.Size = new System.Drawing.Size(100, 20);
-            this.telefone.TabIndex = 5;
+            this.Telefone.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telefone.Location = new System.Drawing.Point(404, 370);
+            this.Telefone.Mask = "(00) 0000-00000";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.Size = new System.Drawing.Size(199, 42);
+            this.Telefone.TabIndex = 5;
+            this.Telefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.telefone_MaskInputRejected);
             // 
             // CPF
             // 
-            this.CPF.Location = new System.Drawing.Point(458, 583);
+            this.CPF.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPF.Location = new System.Drawing.Point(396, 557);
             this.CPF.Mask = "000,000,000-00";
             this.CPF.Name = "CPF";
-            this.CPF.Size = new System.Drawing.Size(100, 20);
+            this.CPF.Size = new System.Drawing.Size(207, 42);
             this.CPF.TabIndex = 6;
             // 
             // continuar
             // 
-            this.continuar.Location = new System.Drawing.Point(946, 367);
+            this.continuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.continuar.Location = new System.Drawing.Point(951, 370);
             this.continuar.Name = "continuar";
-            this.continuar.Size = new System.Drawing.Size(156, 107);
+            this.continuar.Size = new System.Drawing.Size(190, 107);
             this.continuar.TabIndex = 7;
             this.continuar.Text = "Continuar";
             this.continuar.UseVisualStyleBackColor = true;
             this.continuar.Click += new System.EventHandler(this.continuar_Click);
             // 
+            // senha
+            // 
+            this.senha.Location = new System.Drawing.Point(851, 199);
+            this.senha.Multiline = true;
+            this.senha.Name = "senha";
+            this.senha.Size = new System.Drawing.Size(220, 40);
+            this.senha.TabIndex = 8;
+            // 
             // FmlLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 615);
+            this.ClientSize = new System.Drawing.Size(1153, 628);
+            this.Controls.Add(this.senha);
             this.Controls.Add(this.continuar);
             this.Controls.Add(this.CPF);
-            this.Controls.Add(this.telefone);
-            this.Controls.Add(this.endereco);
+            this.Controls.Add(this.Telefone);
+            this.Controls.Add(this.Endereco);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.NomeCompleto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Name = "FmlLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FmlLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -137,9 +152,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox NomeCompleto;
         private System.Windows.Forms.TextBox Email;
-        private System.Windows.Forms.TextBox endereco;
-        private System.Windows.Forms.MaskedTextBox telefone;
+        private System.Windows.Forms.TextBox Endereco;
+        private System.Windows.Forms.MaskedTextBox Telefone;
         private System.Windows.Forms.MaskedTextBox CPF;
         private System.Windows.Forms.Button continuar;
+        private System.Windows.Forms.TextBox senha;
     }
 }

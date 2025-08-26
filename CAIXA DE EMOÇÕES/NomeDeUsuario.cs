@@ -1,19 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace CAIXA_DE_EMOÇÕES
 {
     public partial class NomeDeUsuario : Form
     {
-        // 🔹 Aqui sim: string de conexão é atributo da classe
-        private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=CaixaEmocoesDB;Integrated Security=True";
+        // 🔹 String de conexão como atributo da classe
+        private string connectionString = "Server=sqlexpress;Database=CJ3027902PR2;user id=aluno; password=aluno;";
 
         public NomeDeUsuario()
         {
@@ -22,45 +16,33 @@ namespace CAIXA_DE_EMOÇÕES
 
         private void BtnCriar_Click(object sender, EventArgs e)
         {
+            string usuario = TxtUsuario.Text.Trim();
+            string senha = TxtSenha.Text.Trim();
+
+            // Validação de campos
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(senha))
+            {
+                MessageBox.Show("Preencha usuário e senha.", "Atenção",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
-                string usuario = TxtUsuario.Text.Trim();
-                string senha = TxtSenha.Text.Trim();
-
-                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(senha))
-                {
-                    MessageBox.Show("Preencha usuário e senha.", "Atenção",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    // Verifica se já existe usuário
-                    string checkUser = "SELECT COUNT(*) FROM Usuarios WHERE NomeUsuario = @usuario";
-                    using (SqlCommand cmd = new SqlCommand(checkUser, conn))
+                    // 🔹 Verifica se usuário já existe
+                    if (UsuarioExiste(conn, usuario))
                     {
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
-                        int count = (int)cmd.ExecuteScalar();
-
-                        if (count > 0)
-                        {
-                            MessageBox.Show("Esse usuário já existe!", "Erro",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
+                        MessageBox.Show("Esse usuário já existe!", "Erro",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
 
-                    // Insere novo usuário
-                    string insert = "INSERT INTO Usuarios (NomeUsuario, Senha) VALUES (@usuario, @senha)";
-                    using (SqlCommand cmd = new SqlCommand(insert, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
-                        cmd.Parameters.AddWithValue("@senha", senha);
-                        cmd.ExecuteNonQuery();
-                    }
+                    // 🔹 Insere novo usuário
+                    InserirUsuario(conn, usuario, senha);
                 }
 
                 MessageBox.Show("Usuário criado com sucesso!", "Sucesso",
@@ -73,6 +55,30 @@ namespace CAIXA_DE_EMOÇÕES
             {
                 MessageBox.Show("Erro ao criar usuário:\n" + ex.Message, "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // 🔹 Método para verificar se usuário já existe
+        private bool UsuarioExiste(SqlConnection conn, string usuario)
+        {
+            string query = "SELECT COUNT(*) FROM Usuarios WHERE NomeUsuario = @usuario";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        // 🔹 Método para inserir novo usuário
+        private void InserirUsuario(SqlConnection conn, string usuario, string senha)
+        {
+            string query = "INSERT INTO Usuarios (NomeUsuario, Senha) VALUES (@Usuario, @Senha)";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Senha", senha);
+                cmd.ExecuteNonQuery();
             }
         }
     }
