@@ -20,6 +20,7 @@ namespace CAIXA_DE_EMOÇÕES
 
         private void Entrar_Click(object sender, EventArgs e)
         {
+            this.Entrar.Click += new System.EventHandler(this.Entrar_Click);
             string email = Email.Text;
             string Nome = NomeCompleto.Text;
             string senha = Senha.Text;
@@ -31,8 +32,8 @@ namespace CAIXA_DE_EMOÇÕES
                 return;
             }
 
-            // Conexão com o banco de dados
-            string conexao = "Server=sqlexpress;Database=CJ3027902PR2;user id=aluno; password=aluno;";
+            // ⚡ Ajuste a connection string conforme seu servidor
+            string conexao = @"Data Source=.\SQLEXPRESS; Initial Catalog=CJ3027902PR2;User ID=aluno;Password=aluno;";
 
             try
             {
@@ -40,29 +41,31 @@ namespace CAIXA_DE_EMOÇÕES
                 {
                     con.Open();
 
-                    // Consulta de verificação do login
-                    string query = "SELECT COUNT(*) FROM DADOSusuario WHERE Email = @Email AND Nome = @NomeUsuario AND Senha = @Senha";
-
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Nome", Nome);
-                    cmd.Parameters.AddWithValue("@Senha", senha);
-
-                    int count = (int)cmd.ExecuteScalar();
-
-                    if (count > 0)
+                    string query = "SELECT COUNT(*) FROM DADOSusuario WHERE Email = @Email AND Nome = @Nome AND Senha = @Senha";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Você pode abrir outro formulário aqui, por exemplo:
-                        Entre telaPrincipal = new Entre();
-                        telaPrincipal.Show();
-                        this.Hide(); // esconde o form de login
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuário ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Nome", Nome);
+                        cmd.Parameters.AddWithValue("@Senha", senha); // senha pura, igual está salva no banco
+
+                        int count = (int)cmd.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            this.Hide();
+
+                            NovaAba product = new NovaAba();
+                            product.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -71,3 +74,4 @@ namespace CAIXA_DE_EMOÇÕES
         }
     }
 }
+

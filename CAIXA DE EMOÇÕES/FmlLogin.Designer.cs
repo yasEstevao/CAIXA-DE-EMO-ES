@@ -45,16 +45,16 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(806, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(789, 231);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(346, 410);
+            this.pictureBox1.Size = new System.Drawing.Size(545, 955);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-19, -30);
+            this.pictureBox2.Location = new System.Drawing.Point(-14, -29);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1218, 682);
             this.pictureBox2.TabIndex = 1;
@@ -106,7 +106,7 @@
             // continuar
             // 
             this.continuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.continuar.Location = new System.Drawing.Point(951, 370);
+            this.continuar.Location = new System.Drawing.Point(904, 408);
             this.continuar.Name = "continuar";
             this.continuar.Size = new System.Drawing.Size(190, 107);
             this.continuar.TabIndex = 7;
