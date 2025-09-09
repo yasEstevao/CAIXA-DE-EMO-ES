@@ -51,7 +51,7 @@ namespace CAIXA_DE_EMOÇÕES
 
                     MessageBox.Show("✅ Cliente cadastrado com sucesso!");
                 }
-                Entre Product = new Entre();
+                NovaAba Product = new NovaAba();
                 Product.Show();
             }
             catch (Exception ex)

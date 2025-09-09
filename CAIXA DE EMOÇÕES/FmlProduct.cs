@@ -43,7 +43,7 @@ Environment.Exit(0 );
 
         private void BtnEnter_Click_1(object sender, EventArgs e)
         {
-            Entre Product = new Entre();
+            NovaAba Product = new NovaAba();
             Product.Show();
         }
 

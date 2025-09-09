@@ -62,26 +62,29 @@
             // 
             // NomeCompleto
             // 
+            this.NomeCompleto.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomeCompleto.Location = new System.Drawing.Point(396, 167);
             this.NomeCompleto.Multiline = true;
             this.NomeCompleto.Name = "NomeCompleto";
-            this.NomeCompleto.Size = new System.Drawing.Size(366, 51);
+            this.NomeCompleto.Size = new System.Drawing.Size(387, 51);
             this.NomeCompleto.TabIndex = 2;
             // 
             // Email
             // 
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(396, 268);
             this.Email.Multiline = true;
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(366, 51);
+            this.Email.Size = new System.Drawing.Size(387, 51);
             this.Email.TabIndex = 3;
             // 
             // Endereco
             // 
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Endereco.Location = new System.Drawing.Point(396, 458);
             this.Endereco.Multiline = true;
             this.Endereco.Name = "Endereco";
-            this.Endereco.Size = new System.Drawing.Size(366, 51);
+            this.Endereco.Size = new System.Drawing.Size(400, 51);
             this.Endereco.TabIndex = 4;
             // 
             // Telefone
@@ -116,10 +119,11 @@
             // 
             // senha
             // 
+            this.senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.senha.Location = new System.Drawing.Point(851, 199);
             this.senha.Multiline = true;
             this.senha.Name = "senha";
-            this.senha.Size = new System.Drawing.Size(220, 40);
+            this.senha.Size = new System.Drawing.Size(243, 40);
             this.senha.TabIndex = 8;
             // 
             // FmlLogin
