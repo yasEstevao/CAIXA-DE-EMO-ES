@@ -109,7 +109,7 @@
             // continuar
             // 
             this.continuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.continuar.Location = new System.Drawing.Point(904, 408);
+            this.continuar.Location = new System.Drawing.Point(904, 402);
             this.continuar.Name = "continuar";
             this.continuar.Size = new System.Drawing.Size(190, 107);
             this.continuar.TabIndex = 7;

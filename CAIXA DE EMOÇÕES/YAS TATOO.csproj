@@ -64,12 +64,6 @@
     <Compile Include="FmlProduct.Designer.cs">
       <DependentUpon>FmlProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="NomeDeUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NomeDeUsuario.Designer.cs">
-      <DependentUpon>NomeDeUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="NovaAba.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +80,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmlProduct.resx">
       <DependentUpon>FmlProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NomeDeUsuario.resx">
-      <DependentUpon>NomeDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovaAba.resx">
       <DependentUpon>NovaAba.cs</DependentUpon>
